@@ -1,0 +1,156 @@
+﻿body{
+    height:150vh;
+
+}
+.container-color {
+    background-color: #2d2f31;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: start;
+    max-width: 1090px;
+    margin: 0 auto;
+    background-color: #2d2f31;
+}
+.Container1 {
+    margin-top:20px;
+    color: white;
+    margin-bottom:20px
+}
+.TitleContainer {
+    width: 789px;
+
+}
+.title {
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+}
+.description {
+    margin-bottom: 10px;
+}
+.diflvl {
+    margin-bottom: 10px;
+}
+.sidebar-container {
+    width: 300px;
+    height: 600px;
+    z-index: 1;
+    border-bottom: 1px solid red;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+    background-color: #fff;
+    position: absolute;
+    margin-top: 26px;
+    margin-left: 790px;
+}
+.videoContainer {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-bottom: 2px solid #2d2f31;
+}
+
+    .videoContainer img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-image: url('https://static.thenounproject.com/png/117815-200.png');
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 0.2s; /* Додайте плавну анімацію для плавного збільшення */
+}
+
+.videoContainer:hover .play-button {
+    transform: translate(-50%, -50%) scale(1.2); /* Збільште значок на 20% при наведенні на контейнер */
+}
+.accordion {
+    max-width: 1090px;
+    margin: 100px auto;
+}
+
+    .accordion .container {
+        margin-bottom: 10px;
+
+        padding: 10px;
+        background: #e0ffff;
+        border-radius: 5px;
+    }
+
+    .accordion .label {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: 500;
+        color: #42455a;
+        cursor: pointer;
+    }
+
+        .accordion .label span {
+            font-size: 22px;
+            color: #333;
+        }
+
+    .accordion .content {
+        height: 0;
+        padding: 0 10px;
+        line-height: 26px;
+        overflow: hidden;
+        transition: height 0.5s;
+    }
+
+    .accordion .container.active .content {
+        height: 100px;
+    }
+
+.cps {
+    max-width: 1090px;
+    margin: 50px 356px 0 0;
+    border: 1px solid #d1d7dc;
+    padding:30px;
+}
+.WhatLearn {
+
+    max-width: 1090px;
+    margin: 0 auto;
+}
+.list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding:0px;
+}
+.list li {
+    width: 50%;
+    display:flex;
+    margin-top:30px;
+}
+    .list li span {
+margin-right:10px;
+    }
+.material-symbols-outlined {
+    transition: transform 0.3s ease; /* Додайте плавну анімацію для обертання */
+}
+.InstructorBio {
+    max-width: 1090px;
+    margin: auto;
+}
+.InstructorImageAndStats{
+    display:flex;
+
+}
+.StatContainer {
+    display: flex;
+    align-items: center;
+}

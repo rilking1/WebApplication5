@@ -1,0 +1,234 @@
+﻿@model IEnumerable<WebApplication5.Data.Course>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    @*     <link rel="stylesheet" href="~/Views/Courses/Index.cshtml.css" />
+    *@
+
+
+</head>
+
+<body>
+
+    <h1>
+        Курси<p class="button-19">
+            <a asp-action="Create">Create New</a>
+        </p>
+    </h1>
+
+    <div class="card-container">
+        <div class="course-container">
+            <div class="filter">
+                <p class="material-symbols-outlined">
+                    tune
+                </p>
+            </div>
+            @foreach (var item in Model)
+            {
+                <a asp-action="Details" asp-route-id="@item.Id">
+                    <div class="card">
+                        <div class="rating">
+                            Рівень: <span class="DifficultyLevel">@Html.DisplayFor(modelItem => item.DifficultyLevel.DifLevel)</span>
+                            <span class="stars">★★☆☆☆</span>
+                        </div>
+                        <img src="@Html.DisplayFor(modelItem => item.PhotoUrl.PhotoUrl)" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h4>
+@*                             <h6 class="card-text">@Html.DisplayFor(modelItem => item.Teachers.FirstName) @Html.DisplayFor(modelItem => item.Teachers.LastName)</h6> *@
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+    <div class="PartnersBanner">
+        <div class="PartnersBanner-container">
+            <h2 class="PartnersBannerText"> Нам довіряють більше ніж 15,000 компаній та мільйони університетів по всьому світу</h2>
+            <ul class="PartnerLogosModuleList">
+                <li class="partner-logos-module--item--M8vYZ"><img src="https://s.udemycdn.com/partner-logos/ou-v1/volkswagen.svg" alt="Логотип Volkswagen" width="48" height="48" loading="lazy"></li>
+                <li class="partner-logos-module--item--M8vYZ"><img src="https://s.udemycdn.com/partner-logos/ou-v1/samsung.svg" alt="Логотип Samsung" width="101" height="34" loading="lazy"></li>
+                <li class="partner-logos-module--item--M8vYZ"><img src="https://s.udemycdn.com/partner-logos/ou-v1/cisco.svg" alt="Логотип Cisco" width="87" height="40" loading="lazy"></li>
+                <li class="partner-logos-module--item--M8vYZ"><img src="https://s.udemycdn.com/partner-logos/ou-v1/att.svg" alt="Логотип ATT&amp;T" width="97" height="40" loading="lazy"></li>
+                <li class="partner-logos-module--item--M8vYZ"><img src="https://s.udemycdn.com/partner-logos/ou-v1/procter_gamble.svg" alt="Логотип Procter &amp; Gamble" width="48" height="48" loading="lazy"></li>
+                <li class="partner-logos-module--item--M8vYZ"><img src="https://s.udemycdn.com/partner-logos/ou-v1/hewlett_packard_enterprise.svg" alt="Логотип Hewlett Packard Enterprise" width="94" height="40" loading="lazy"></li>
+                <li class="partner-logos-module--item--M8vYZ"><img src="https://s.udemycdn.com/partner-logos/ou-v1/citi.svg" alt="Логотип Citi" width="62" height="40" loading="lazy"></li>
+                <li class="partner-logos-module--item--M8vYZ"><img src="https://s.udemycdn.com/partner-logos/ou-v1/ericsson.svg" alt="Логотип Ericsson" width="55" height="48" loading="lazy"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-container">
+        <h2 class="TopCategoriesTitle">Top categories</h2>
+        <div class="TopCategories">
+            <a class="CategoryLink" href="#">
+                <div class="CategoryCard">
+                    <img src="https://s.udemycdn.com/home/top-categories/lohp-category-design-v2.jpg">
+                </div>
+                <div class="CardTitle">
+                    <span class="CategoryTatle">Design</span>
+                </div>
+            </a>
+            <a class="CategoryLink" href="#">
+                <div class="CategoryCard">
+                    <img src="https://s.udemycdn.com/home/top-categories/lohp-category-development-v2.jpg">
+                </div>
+                <div class="CardTitle">
+                    <span class="CategoryTatle">Design</span>
+                </div>
+            </a>
+            <a class="CategoryLink" href="#">
+                <div class="CategoryCard">
+                    <img src="https://s.udemycdn.com/home/top-categories/lohp-category-marketing-v2.jpg">
+                </div>
+                <div class="CardTitle">
+                    <span class="CategoryTatle">Design</span>
+                </div>
+            </a>
+            <a class="CategoryLink" href="#">
+                <div class="CategoryCard">
+                    <img src="https://s.udemycdn.com/home/top-categories/lohp-category-it-and-software-v2.jpg">
+                </div>
+                <div class="CardTitle">
+                    <span class="CategoryTatle">Design</span>
+                </div>
+            </a>
+            <a class="CategoryLink" href="#">
+                <div class="CategoryCard">
+                    <img src="https://s.udemycdn.com/home/top-categories/lohp-category-personal-development-v2.jpg">
+                </div>
+                <div class="CardTitle">
+                    <span class="CategoryTatle">Design</span>
+                </div>
+            </a>
+            <a class="CategoryLink" href="#">
+                <div class="CategoryCard">
+                    <img src="https://s.udemycdn.com/home/top-categories/lohp-category-business-v2.jpg">
+                </div>
+                <div class="CardTitle">
+                    <span class="CategoryTatle">Design</span>
+                </div>
+            </a>
+            <a class="CategoryLink" href="#">
+                <div class="CategoryCard">
+                    <img src="https://s.udemycdn.com/home/top-categories/lohp-category-photography-v2.jpg">
+                </div>
+                <div class="CardTitle">
+                    <span class="CategoryTatle">Design</span>
+                </div>
+            </a>
+            <a class="CategoryLink" href="#">
+                <div class="CategoryCard">
+                    <img src="https://s.udemycdn.com/home/top-categories/lohp-category-music-v2.jpg">
+                </div>
+                <div class="CardTitle">
+                    <span class="CategoryTatle">Design</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <div class="TeacherContainerColor">
+        <div class="TeacherContainer">
+            <div class="TeacherContainerText">
+                <div class="cps">
+                    <h3 class="TeacherContainerTextTitle">Upskill your team with Udemy Business</h3>
+                    <ul class="list">
+                        <li>
+                            <span class="material-symbols-outlined">fiber_manual_record</span>
+                            <div class="text">Unlimited access to 25,000+ top Udemy courses, anytime, anywhere</div>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">fiber_manual_record</span>
+                            <div class="text">International course collection in 14 languages</div>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">fiber_manual_record</span>
+                            <div class="text">Top certifications in tech and business</div>
+                        </li>
+                    </ul>
+                    <button class="button-primary">Learn More</button>
+                    <button class="button-secondary">Contact Sales</button>
+                </div>
+            </div>
+            <div class="TeacherContainerPhoto">
+                <img class="non-student-cta--non-student-cta-image--ZVcNN non-student-cta--on-desktop--ll3m4"
+                     srcset="https://s.udemycdn.com/home/non-student-cta/UB_Promo_800x800.jpg 1x, https://s.udemycdn.com/home/non-student-cta/UB_Promo_1200x1200.jpg 2x"
+                     alt=""
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+
+
+@*
+        <table class="table table-bordered">
+        <thead>
+        <tr>
+        <th>
+
+        Назва
+        </th>
+        <th>
+
+        Опис
+        </th>
+
+        <th>
+
+        Категорія
+        </th>
+        <th>
+
+        Рівень складності
+        </th>
+        <th>
+
+        Викладач
+        </th>
+        <th>
+
+        Фото
+        </th>
+        <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+        <td>
+        @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+        @Html.DisplayFor(modelItem => item.Description)
+        </td>
+
+        <td>
+        @Html.DisplayFor(modelItem => item.Category.Category1)
+        </td>
+        <td>
+        @Html.DisplayFor(modelItem => item.DifficultyLevel.DifLevel)
+        </td>
+        <td>
+        @Html.DisplayFor(modelItem => item.Teachers.FirstName) @Html.DisplayFor(modelItem => item.Teachers.LastName)
+        </td>
+        <td>
+        @Html.DisplayFor(modelItem => item.PhotoUrl.PhotoUrl)
+        </td>
+        <td>
+        <a asp-action="Edit" asp-route-id="@item.Id">Редагувати</a> |
+        <a asp-action="Details" asp-route-id="@item.Id">Переглянути деталі</a> |
+        <a asp-action="Delete" asp-route-id="@item.Id">Видалити</a>
+        </td>
+        </tr>
+        }
+        </tbody>
+        </table>
+        *@
+

@@ -1,0 +1,10 @@
+﻿    @model WebApplication5.Data.User
+
+<h1>User Profile</h1>
+
+<div>
+    <p>Email: @Model.Email</p>
+    <p>Full Name: @Model.UserName</p>
+    <p>Photo: <img src="@ViewData["PhotoUrl"]" alt="User Photo" /></p>
+
+</div>
